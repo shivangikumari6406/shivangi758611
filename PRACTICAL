@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reverse Number</title>
+</head>
+
+<body>
+
+    <!-- HTML -->
+    <h2>Reverse a Number</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <br>
+    <button onclick="reverseNumber()">Reverse</button>
+
+    <p id="result"></p>
+
+</body>
+
+<!-- CSS -->
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+    }
+    #result {
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    function reverseNumber() {
+        let num = document.getElementById("num").value;
+        let reversed = 0;
+
+        while (num > 0) {
+            let digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num = Math.floor(num / 10);
+        }
+
+        document.getElementById("result").innerHTML = "Reversed Number: " + reversed;
+    }
+</script>
+
+</html>
