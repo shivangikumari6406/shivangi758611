@@ -1,63 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Experiment 7: React-like Props</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #367fec;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-        .container {
-            background: pink;
-            border: 1px solid #ccc;
-            width: 400px;
-            padding: 30px;
-            text-align: center;
-            border-radius: 10px;
-        }
-        /* Student Card Style */
-        .student-card {
-            border: 1px solid #ddd;
-            margin: 15px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-        }
-        .student-card h3 { margin: 5px 0; color: #333; }
-        .student-card p { margin: 2px 0; font-size: 14px; color: #db4040; }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h2>Student Information</h2>
-        <div id="root">
-            </div>
-    </div>
-
-    <script>
-        // This function acts like a "Functional Component" in React
-        function Student(name, course, marks) {
-            return `
-                <div class="student-card">
-                    <h3>${name}</h3>
-                    <p>Course: ${course}</p>
-                    <p>Marks: ${marks}</p>
-                </div>
-            `;
-        }
-
-        // Parent "App" logic
-        const root = document.getElementById('root');
-        
-        // Passing "Props" to the Student component multiple times
-        root.innerHTML += Student("anuradha kumari", "b.sc", 95);
-        root.innerHTML += Student("shama parveen", "B.B.A", 95);
-        root.innerHTML += Student("shivangi kumari", "b.tech", 95);
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>first</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
